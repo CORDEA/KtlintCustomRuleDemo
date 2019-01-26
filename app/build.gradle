@@ -1,12 +1,8 @@
-import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
-
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
-apply plugin: 'org.jlleitschuh.gradle.ktlint'
 
 android {
     compileSdkVersion 28
@@ -35,12 +31,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-}
-
-ktlint {
-    android = true
-    outputToConsole = true
-    reporters = [ReporterType.PLAIN, ReporterType.CHECKSTYLE]
-    ruleSets = [
-    ]
 }
