@@ -38,3 +38,11 @@ ktlint {
     ruleSets = [
     ]
 }
+
+allprojects {
+    tasks.whenTaskAdded { task ->
+        if (task.project.name != "ktlint-rules" && task.name.contains("ktlint")) {
+            task.dependsOn(":ktlint-rules:build")
+        }
+    }
+}
