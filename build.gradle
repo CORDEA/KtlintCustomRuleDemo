@@ -36,6 +36,7 @@ ktlint {
     outputToConsole = true
     reporters = [ReporterType.PLAIN, ReporterType.CHECKSTYLE]
     ruleSets = [
+            "../ktlint-rules/build/libs/ktlint-rules.jar"
     ]
 }
 
